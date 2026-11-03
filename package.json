@@ -1,0 +1,14 @@
+{
+  "name": "aimemi",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AIMEMI — телеграм-бот «Вторая память»",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
