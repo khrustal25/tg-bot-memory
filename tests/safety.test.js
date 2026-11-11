@@ -31,12 +31,9 @@ test('в проекте нет вписанного токена', () => {
   }
   const ignore = fs.readFileSync(path.join(root, '.gitignore'), 'utf8');
   assert.match(ignore, /^\.env$/m);
-});
-
-test('пример окружения не содержит настоящий токен', () => {
-  const example = fs.readFileSync(path.join(root, '.env.example'), 'utf8');
-  assert.match(example, /TELEGRAM_BOT_TOKEN=/);
-  assert.equal(/TELEGRAM_BOT_TOKEN=.+/.test(example), false);
+  assert.match(ignore, /^\.env\.example$/m);
+  assert.equal(fs.existsSync(path.join(root, '.env')), false);
+  assert.equal(fs.existsSync(path.join(root, '.env.example')), false);
 });
 
 test('неверная временная зона не ломает настройку', () => {

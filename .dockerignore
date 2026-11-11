@@ -1,0 +1,45 @@
+# Не класть в образ ничего секретного и лишнего
+node_modules
+npm-debug.log*
+.git
+.cursor
+.idea
+.vscode
+
+# Все файлы окружения и секреты (включая шаблон — в образе он не нужен)
+.env
+.env.*
+**/.env
+**/.env.*
+.envrc
+.flaskenv
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+id_rsa
+id_rsa.*
+credentials*
+*credentials*
+*secret*
+secrets/
+*.secret
+*.token
+
+# Пользовательские данные
+data/*.sqlite
+data/*.sqlite-wal
+data/*.sqlite-shm
+data/*.sqlite-journal
+data/*.db
+data/*.db-*
+
+# Не нужны для запуска бота
+tests
+BRIEF*
+*.md
+!README.md
+*.log
+.DS_Store
+Thumbs.db

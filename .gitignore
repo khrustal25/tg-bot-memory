@@ -1,7 +1,41 @@
+# Зависимости
 node_modules/
+
+# Секреты и любые файлы окружения — в GitHub не нужны
 .env
+.env.*
+**/.env
+**/.env.*
+.env.example
+**/.env.example
+.envrc
+.flaskenv
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+id_rsa
+id_rsa.*
+credentials*
+*credentials*
+*secret*
+secrets/
+*.secret
+*.token
+
+# Локальная база и пользовательские данные
 data/*.sqlite
 data/*.sqlite-wal
 data/*.sqlite-shm
 data/*.sqlite-journal
+data/*.db
+data/*.db-*
+
+# Служебное
 *.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
